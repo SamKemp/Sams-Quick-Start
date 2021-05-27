@@ -67,6 +67,7 @@ function modInit()
 			{"exoskeleton-equipment", 1},
 			{"personal-roboport-mk2-equipment", 1},
 			{"night-vision-equipment", 1},
+			{"battery-equipment", 4},
 			-- weapons
 			{"submachine-gun", 1},
 			{"piercing-rounds-magazine", 200},
