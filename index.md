@@ -1,6 +1,7 @@
 ## Sam's Quick Start mod for [Factorio](https://factorio.com/)
 
-_Imagine a reall awesome mod description here_
+My own version of a quick start mod giving you some starting equipment, materials and tech.
+_Imagine a really awesome mod description here_
 
 When using this mod, you will start the game with the following items
 
