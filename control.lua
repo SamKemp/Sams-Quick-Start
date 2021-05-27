@@ -1,19 +1,16 @@
 local function has_expected_freeplay_interface()
-	-- Does the interface exist at all?
+	
 	if not remote.interfaces.freeplay then return false end
-	-- I want these four functions
+	
 	local expected_methods = {
-	  'get_created_items', 'set_created_items', -- change the player starting inventory
-	  'get_debris_items' , 'set_debris_items' , -- change which of those items spawn in the wreckage
+	  'get_created_items', 'set_created_items',
+	  'get_debris_items' , 'set_debris_items' ,
 	  }
-	-- When iterating though an array often the index is not relevant.
-	-- By convention it is often named with a single _ underscore,
-	-- but it's really still a normal variable that's just never used!
+
 	for _,method in pairs(expected_methods) do
-	  -- If any of the methods is missing the check fails instantly.
 	  if not remote.interfaces.freeplay[method] then return false end
 	end
-	-- If nothing failed then everything is ok!
+	
 	return true
 end
 
@@ -76,7 +73,6 @@ function modInit()
 		for _, v in pairs(items) do
 			add_item_to_freeplay('created_items',{[v[1]]=v[2]})
 			add_item_to_freeplay('debris_items' ,{[v[1]]=v[2]})
-			-- player.insert{name = v[1], count = v[2]}
 		end
 	
 	  else
@@ -87,8 +83,6 @@ function modInit()
 			end
 		  end
 	
-		-- In case nobody is on the server when this happens i'm also going to
-		-- print the message to the log file.
 		log("ROBOTIC START - Freeplay Interface not found")
 	
 	end
